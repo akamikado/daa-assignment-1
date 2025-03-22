@@ -93,11 +93,10 @@ size_t maximal_clique_count = 0;
 std::unordered_map<size_t, size_t> clique_size_distribution;
 
 void expand(const SparseGraph &graph, const std::vector<int> &subg,
-            std::vector<int> &cand, std::vector<int> &current_path,
-            bool first_call) {
+            std::vector<int> &cand, std::vector<int> &Q, bool first_call) {
   if (subg.empty()) {
     maximal_clique_count++;
-    size_t size = current_path.size();
+    size_t size = Q.size();
     clique_size_distribution[size]++;
     max_clique_size = std::max(max_clique_size, size);
     return;
@@ -137,7 +136,7 @@ void expand(const SparseGraph &graph, const std::vector<int> &subg,
     int q = diff.back();
     diff.pop_back();
 
-    current_path.push_back(q);
+    Q.push_back(q);
 
     const auto &q_neighbors = graph.get_neighbors(q);
 
@@ -150,9 +149,9 @@ void expand(const SparseGraph &graph, const std::vector<int> &subg,
     std::set_intersection(cand.begin(), cand.end(), q_neighbors.begin(),
                           q_neighbors.end(), std::back_inserter(cand_q));
 
-    expand(graph, subg_q, cand_q, current_path, false);
+    expand(graph, subg_q, cand_q, Q, false);
 
-    current_path.pop_back();
+    Q.pop_back();
 
     auto it = std::lower_bound(cand.begin(), cand.end(), q);
     if (it != cand.end() && *it == q) {
