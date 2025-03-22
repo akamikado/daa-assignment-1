@@ -219,7 +219,7 @@ int main(int argc, char *argv[]) {
 
   std::sort(sorted_distribution.begin(), sorted_distribution.end());
 
-  std::string csv_filename = dataset + "_clique_distribution.csv";
+  std::string csv_filename = "cli_" + dataset + "_clique_distribution.csv";
   std::ofstream csv_file(csv_filename);
 
   if (!csv_file) {
@@ -237,7 +237,7 @@ int main(int argc, char *argv[]) {
   std::cout << "Clique size distribution written to: " << csv_filename
             << std::endl;
 
-  std::string summary_filename = dataset + "_summary.csv";
+  std::string summary_filename = "cli_" + dataset + "_summary.csv";
   std::ofstream summary_file(summary_filename);
 
   if (!summary_file) {
