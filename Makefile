@@ -1,11 +1,16 @@
 cli: clique.cpp
-	g++ clique.cpp -o clique -Wall -Wextra -Wconversion
+	g++ clique.cpp -o cli -Ofast -Wall -Wextra -Wconversion
 
 bb: bronkerbosch.cpp
-	g++ bronkerbosch.cpp -o bronkerbosch -Wall -Wextra -Wconversion
+	g++ bronkerbosch.cpp -o bb -Ofast -Wall -Wextra -Wconversion
 
 arcli: arboricity_clique.cpp
-	g++ arboricity_clique.cpp -o arboricity_clique -Wall -Wextra -Wconversion
+	g++ arboricity_clique.cpp -o arcli -Ofast -Wall -Wextra -Wconversion
 
 clean:
 	rm clique bronkerbosch arboricity_clique
+
+GZ_FILES = $(wildcard *.gz)
+prepare: $(GZ_FILES)
+	echo "Processing all datasets: $(GZ_FILES)"
+	gzip $(GZ_FILES) -d

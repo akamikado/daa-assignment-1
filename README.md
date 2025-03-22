@@ -1,0 +1,63 @@
+# **Maximal Clique Enumeration**  
+
+## **Table of Contents**  
+- [Introduction](#introduction)  
+- [Prerequisites](#prerequisites)  
+- [Dataset Preparation](#dataset-preparation)  
+- [Execution Instructions](#execution-instructions)  
+- [Individual Contributions](#individual-contributions)  
+
+## **Introduction**  
+This project implements multiple algorithms for **Maximal Clique Enumeration** in sparse graphs. The goal is to efficiently list all maximal cliques using different algorithmic approaches, each optimized for specific scenarios.
+
+---
+
+## **Prerequisites**  
+Ensure the following dependencies are installed before running the project:  
+- **Make** – for build automation  
+- **g++** – GNU C++ compiler  
+- **gzip** – for handling compressed datasets  
+
+To verify installations, run:  
+```bash
+make --version
+g++ --version
+gzip --version
+```
+
+---
+
+## Dataset Preparation
+To prepare compressed datasets (.gz files), move them into the project directory and run:
+```bash
+make prepare
+```
+
+## **Execution Instructions**  
+To run different Maximal Clique Enumeration algorithms, use the following commands:
+- The worst-case time complexity for generating all maximal cliques and computational experiments.
+```bash
+make cli
+./cli dataset.txt
+```
+
+- Listing All Maximal Cliques in Sparse Graphs in Near-Optimal TIme
+```bash
+make bb
+./bb dataset.txt
+```
+
+- Arboricity and Subgraph Listing Algorithms
+```bash
+make arcli
+./arcli dataset.txt
+```
+
+## Individual Contributions
+| Name | ID Number |
+| --- | --- |
+| Manish Vasireddy | 2022A7PS0145H |
+| Linga Sai Vaishnav Yerram | 2022A7PS0060H |
+| Srichandra Lolla | 2022A7PS0051H |
+| Sasidhara Reddy Appireddy | 2022A7PS0019H |
+| Vipul Alampally | 2022A7PS0098H |
