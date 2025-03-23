@@ -58,7 +58,9 @@ make arcli
 | Name | ID Number |
 | --- | --- |
 | Manish Vasireddy | 2022A7PS0145H |
-| Linga Sai Vaishnav Yerram | 2022A7PS0060H |
-| Srichandra Lolla | 2022A7PS0051H |
+| Linga Sai Vaishnav Yerram | 2022A7PS0060H | worked on implementing proc BronKerboschDegeneracy
+| Srichandra Lolla | 2022A7PS0051H | worked on implementing proc BronKerboschDegeneracy
 | Sasidhara Reddy Appireddy | 2022A7PS0019H |
 | Vipul Alampally | 2022A7PS0098H |
+
+
