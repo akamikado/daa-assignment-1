@@ -153,10 +153,7 @@ void expand(const SparseGraph &graph, const std::vector<int> &subg,
 
     Q.pop_back();
 
-    auto it = std::lower_bound(cand.begin(), cand.end(), q);
-    if (it != cand.end() && *it == q) {
-      cand.erase(it);
-    }
+    cand.erase(std::remove(cand.begin(), cand.end(), q), cand.end());
   }
 }
 

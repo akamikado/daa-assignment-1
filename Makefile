@@ -5,7 +5,7 @@ bb: bronkerbosch.cpp
 	g++ bronkerbosch.cpp -o bb -Ofast -Wall -Wextra -Wconversion
 
 arcli: arboricity_clique.cpp
-	g++ arboricity_clique.cpp -o arcli -Ofast -Wall -Wextra -Wconversion
+	g++ chiba.cpp -o chiba -Ofast -Wall -Wextra -Wconversion
 
 clean:
 	rm clique bronkerbosch arboricity_clique
