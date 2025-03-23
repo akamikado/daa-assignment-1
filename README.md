@@ -55,12 +55,10 @@ make chiba
 ```
 
 ## Individual Contributions
-| Name | ID Number |
-| --- | --- |
-| Manish Vasireddy | 2022A7PS0145H |
-| Linga Sai Vaishnav Yerram | 2022A7PS0060H | worked on implementing proc BronKerboschDegeneracy|
-| Srichandra Lolla | 2022A7PS0051H | worked on implementing proc BronKerboschDegeneracy|
-| Sasidhara Reddy Appireddy | 2022A7PS0019H |
-| Vipul Alampally | 2022A7PS0098H |
-
-
+| Name | ID Number | Contribution |
+| --- | --- | --- |
+| Manish Vasireddy | 2022A7PS0145H | Implemented algorithm from "The worst-case time complexity for generating all maximal cliques and computational experiments" paper and static web page to display findings |
+| Linga Sai Vaishnav Yerram | 2022A7PS0060H | Implemented algorithm from "Listing All Maximal Cliques in Sparse Graphs in Near-Optimal TIme" paper|
+| Srichandra Lolla | 2022A7PS0051H | Implemented algorithm from "Listing All Maximal Cliques in Sparse Graphs in Near-Optimal TIme" paper|
+| Sasidhara Reddy Appireddy | 2022A7PS0019H | Implemented algorithm from "Arboricity and Subgraph Listing Algorithms" paper |
+| Vipul Alampally | 2022A7PS0098H |  Implemented algorithm from "Arboricity and Subgraph Listing Algorithms" paper |

@@ -107,21 +107,11 @@ void expand(const SparseGraph &graph, const std::vector<int> &subg,
   int u = -1;
   size_t max_count = 0;
 
-  if (first_call) {
-    for (int node : cand) {
-      size_t count = graph.get_neighbors(node).size();
-      if (count > max_count) {
-        max_count = count;
-        u = node;
-      }
-    }
-  } else {
-    for (int node : subg) {
-      size_t count = graph.count_common_elements(node, cand);
-      if (count > max_count) {
-        max_count = count;
-        u = node;
-      }
+  for (int node : cand) {
+    size_t count = graph.get_neighbors(node).size();
+    if (count > max_count) {
+      max_count = count;
+      u = node;
     }
   }
 

@@ -43,16 +43,70 @@
         background-color: #007bff;
         color: white;
       }
+      .results-section {
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .highlight {
+        background-color: #fffacd;
+        padding: 2px;
+      }
+      .histogram-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .histogram {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .histogram h4 {
+        text-align: center;
+        margin-top: 0;
+        color: #007bff;
+      }
+      .histogram img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+        border: 1px solid #ddd;
+      }
+      .histogram-caption {
+        text-align: center;
+        font-style: italic;
+        margin-top: 10px;
+        color: #6c757d;
+      }
     </style>
   </head>
   <body>
     <h1>Maximal Clique Enumeration</h1>
-
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#introduction">Introduction</a></li>
+      <li>
+        <a href="#paper1"
+          >The worst-case time complexity for generating all maximal cliques</a
+        >
+      </li>
+      <li>
+        <a href="#paper2"
+          >Listing All Maximal Cliques in Sparse Graphs in Near-Optimal Time</a
+        >
+      </li>
+      <li><a href="#paper3">Arboricity and Subgraph Listing Algorithms</a></li>
+      <li><a href="#distributions">Clique Size Distributions</a></li>
     </ul>
-
     <h2 id="introduction">Introduction</h2>
     <p>
       This project implements multiple algorithms for
@@ -66,8 +120,193 @@
         The worst-case time complexity for generating all maximal cliques and
         computational experiments
       </li>
-      <li>Listing All Maximal Cliques in Sparse Graphs in Near-Optimal TIme</li>
+      <li>Listing All Maximal Cliques in Sparse Graphs in Near-Optimal Time</li>
       <li>Arboricity and Subgraph Listing Algorithms</li>
     </ul>
+
+    <div class="results-section">
+      <h2 id="paper1">
+        The worst-case time complexity for generating all maximal cliques and
+        computational experiments
+      </h2>
+
+      <h3>Implementation Results</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>Largest Clique Size</th>
+            <th>Total Maximal Cliques</th>
+            <th>Execution Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wiki-Vote</td>
+            <td>17</td>
+            <td>459,002</td>
+            <td>2.572 seconds</td>
+          </tr>
+          <tr>
+            <td>email-Enron</td>
+            <td>20</td>
+            <td>226,859</td>
+            <td>2.649 seconds</td>
+          </tr>
+          <tr>
+            <td>as-Skitter</td>
+            <td>67</td>
+            <td>37,322,355</td>
+            <td>1323.645 seconds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="results-section">
+      <h2 id="paper2">
+        Listing All Maximal Cliques in Sparse Graphs in Near-Optimal Time
+      </h2>
+
+      <h3>Implementation Results</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>Largest Clique Size</th>
+            <th>Total Maximal Cliques</th>
+            <th>Execution Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wiki-Vote</td>
+            <td>17</td>
+            <td>459,002</td>
+            <td>2.953 seconds</td>
+          </tr>
+          <tr>
+            <td>email-Enron</td>
+            <td>20</td>
+            <td>226,859</td>
+            <td>3.197 seconds</td>
+          </tr>
+          <tr>
+            <td>as-Skitter</td>
+            <td>67</td>
+            <td>37,322,355</td>
+            <td>1567.462 seconds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="results-section">
+      <h2 id="paper3">Arboricity and Subgraph Listing Algorithms</h2>
+
+      <h3>Implementation Results</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>Largest Clique Size</th>
+            <th>Total Maximal Cliques</th>
+            <th>Execution Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wiki-Vote</td>
+            <td>17</td>
+            <td>459,002</td>
+            <td>132.05 seconds</td>
+          </tr>
+          <tr>
+            <td>email-Enron</td>
+            <td>20</td>
+            <td>226,859</td>
+            <td>1256.32 seconds</td>
+          </tr>
+          <tr>
+            <td>as-Skitter</td>
+            <td class="highlight">NA</td>
+            <td class="highlight">NA</td>
+            <td class="highlight">NA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="results-section">
+      <h2 id="exec-time">Execution Time Distribution</h2>
+      <p>
+        The following histogram shows the distribution of execution times for
+        each dataset for each algorithm implementation:
+      </p>
+
+      <div class="histogram-container">
+        <div class="histogram">
+          <img
+            src="images/exec-time.jpeg"
+            alt="Histogram showing the distribution of execution times for each dataset for each algorithm implementation"
+          />
+          <p class="histogram-caption">
+            Figure 1
+          </p>
+        </div>
+    </div>
+
+    <div class="results-section">
+      <h2 id="distributions">Clique Size Distributions</h2>
+      <p>
+        The following histograms show the distribution of maximal clique sizes
+        in each dataset:
+      </p>
+
+      <div class="histogram-container">
+        <div class="histogram">
+          <h4>wiki-Vote Dataset: Distribution of Maximal Clique Sizes</h4>
+          <img
+            src="images/wiki-vote.jpeg"
+            alt="Histogram showing the distribution of maximal clique sizes in the wiki-Vote dataset"
+          />
+          <p class="histogram-caption">
+            Figure 2: Distribution of maximal clique sizes in the wiki-Vote
+            dataset. The x-axis represents clique size and the y-axis represents
+            frequency.
+          </p>
+        </div>
+
+        <div class="histogram">
+          <h4>email-Enron Dataset: Distribution of Maximal Clique Sizes</h4>
+          <img
+            src="images/email-enron.jpeg"
+            alt="Histogram showing the distribution of maximal clique sizes in the email-Enron dataset"
+          />
+          <p class="histogram-caption">
+            Figure 3: Distribution of maximal clique sizes in the email-Enron
+            dataset. The x-axis represents clique size and the y-axis represents
+            frequency.
+          </p>
+        </div>
+
+        <div class="histogram">
+          <h4>as-Skitter Dataset: Distribution of Maximal Clique Sizes</h4>
+          <img
+            src="images/as-skitter.jpeg"
+            alt="Histogram showing the distribution of maximal clique sizes in the as-Skitter dataset"
+          />
+          <p class="histogram-caption">
+            Figure 4: Distribution of maximal clique sizes in the as-Skitter
+            dataset. The x-axis represents clique size and the y-axis represents
+            frequency.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
