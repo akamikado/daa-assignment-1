@@ -1,14 +1,14 @@
-cli: clique.cpp
-	g++ clique.cpp -o cli -Ofast -Wall -Wextra -Wconversion
+tomita: clique.cpp
+	g++ tomita.cpp -o tomita -Ofast -Wall -Wextra -Wconversion
 
-bb: bronkerbosch.cpp
-	g++ bronkerbosch.cpp -o bb -Ofast -Wall -Wextra -Wconversion
+els: els.cpp
+	g++ bronkerbosch.cpp -o els -Ofast -Wall -Wextra -Wconversion
 
 arcli: arboricity_clique.cpp
 	g++ chiba.cpp -o chiba -Ofast -Wall -Wextra -Wconversion
 
 clean:
-	rm clique bronkerbosch arboricity_clique
+	rm tomita els chiba
 
 GZ_FILES = $(wildcard *.gz)
 prepare: $(GZ_FILES)

@@ -38,20 +38,20 @@ make prepare
 To run different Maximal Clique Enumeration algorithms, use the following commands:
 - The worst-case time complexity for generating all maximal cliques and computational experiments.
 ```bash
-make cli
-./cli dataset.txt
+make tomita
+./tomita dataset.txt
 ```
 
 - Listing All Maximal Cliques in Sparse Graphs in Near-Optimal TIme
 ```bash
-make bb
-./bb dataset.txt
+make els
+./els dataset.txt
 ```
 
 - Arboricity and Subgraph Listing Algorithms
 ```bash
-make arcli
-./arcli dataset.txt
+make chiba
+./chiba dataset.txt
 ```
 
 ## Individual Contributions
